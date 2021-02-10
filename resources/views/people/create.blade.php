@@ -3,7 +3,7 @@
 @section('content')
 <h1>Criar loja</h1>
 
-<form action="/people/person" method="POST">
+<form action="{{ route('people.person') }}" method="POST">
 
     <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
