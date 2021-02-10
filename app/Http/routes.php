@@ -15,7 +15,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/model', function () {
-    return \App\Person::all();
-
-});
+Route::get('/people', 'Admin\\PersonController@index');
+Route::get('/people/create', 'Admin\\PersonController@create');
