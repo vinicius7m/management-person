@@ -21,4 +21,13 @@ class PersonController extends Controller
 
         return view('people.create', compact('people'));
     }
+
+    public function person(Request $request) {
+        $data = $request->all();
+
+        Person::create($data);
+
+        return redirect()->route('people.index');
+
+    }
 }

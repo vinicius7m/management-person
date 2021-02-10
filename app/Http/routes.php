@@ -15,5 +15,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/people', 'Admin\\PersonController@index');
-Route::get('/people/create', 'Admin\\PersonController@create');
+Route::get('/people', 'Admin\\PersonController@index')->name('people.index');
+Route::get('/people/create', 'Admin\\PersonController@create')->name('people.create');
+Route::post('/people/person', 'Admin\\PersonController@person')->name('people.person');
