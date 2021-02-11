@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<h1 class="mt-5">Criar loja</h1>
+<h1>Criar loja</h1>
 
 <form action="{{ route('people.person') }}" method="POST">
 
