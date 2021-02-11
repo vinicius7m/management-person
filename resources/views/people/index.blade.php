@@ -7,6 +7,7 @@
             <th>#</th>
             <th>Nome</th>
             <th>Nascimento</th>
+            <th>Ações</th>
         </tr>
     </thead>
     
@@ -16,6 +17,10 @@
             <td> {{ $person->id }} </td>
             <td> {{ $person->name }} </td>
             <td> {{ $person->birth }} </td>
+            <td> 
+                <a class="btn btn-warning">Editar</a> 
+                <a class="btn btn-danger">Excluir</a> 
+            </td>
         </tr>
         @endforeach
     </tbody>
