@@ -18,6 +18,6 @@ Route::get('/', function () {
 Route::get('/people', 'Admin\\PersonController@index')->name('people.index');
 Route::get('/people/create', 'Admin\\PersonController@create')->name('people.create');
 Route::post('/people/person', 'Admin\\PersonController@person')->name('people.person');
-Route::get('/people/{person}/edit', 'Admin\\PersonController@edit');
-Route::post('/people/update/{person}', 'Admin\\PersonController@update'); 
-Route::get('/people/destroy/{person}', 'Admin\\PersonController@destroy');
+Route::get('/people/{person}/edit', 'Admin\\PersonController@edit')->name('people.edit');
+Route::post('/people/update/{person}', 'Admin\\PersonController@update')->name('people.update'); 
+Route::get('/people/destroy/{person}', 'Admin\\PersonController@destroy')->name('people.destroy');

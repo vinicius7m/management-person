@@ -1,9 +1,12 @@
 @extends('layouts.app')
 
 @section('content')
+
+<a href="{{ route('people.index') }}">Voltar</a>
+
 <h1>Editar loja</h1>
 
-<form action="/people/update/{{$person->id}}" method="POST">
+<form action="{{ route('people.update', ['person' => $person->id]) }}" method="POST">
 
     <input type="hidden" name="_token" value="{{ csrf_token() }}">
 

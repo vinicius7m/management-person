@@ -1,6 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
+
+<a href="{{route('people.index')}}">Voltar</a>
+
 <h1>Criar loja</h1>
 
 <form action="{{ route('people.person') }}" method="POST">

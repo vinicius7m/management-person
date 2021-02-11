@@ -43,13 +43,13 @@ class PersonController extends Controller
         $person = Person::find($person);
         $person->update($data);
 
-        return $person;
+        return redirect()->route('people.index');
     }
 
     public function destroy($person) {
         $person = Person::find($person);
         $person->delete();
 
-        return redirect('/people');
+        return redirect()->route('people.index');
     }
 }
