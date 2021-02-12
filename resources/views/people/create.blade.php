@@ -29,4 +29,9 @@
         <button class="btn btn-primary btn-block" type="submit">Enviar</button>
     </div>
 </form>
+
+@endsection
+
+@section('scripts')
+    <script text="text/javascript" src="{{ url('js/people/create.js') }}"></script>
 @endsection

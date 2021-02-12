@@ -25,7 +25,7 @@ class PersonController extends Controller
         $data = $request->all();
 
         Person::create($data);
-
+       
         return redirect()->route('people.index');
 
     }
