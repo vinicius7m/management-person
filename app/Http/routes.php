@@ -22,6 +22,6 @@ Route::group(['prefix' => 'people'], function() {
     Route::post('person', 'PersonController@person')->name('people.person');
     Route::get('{person}/edit', 'PersonController@edit')->name('people.edit');
     Route::post('update/{person}', 'PersonController@update')->name('people.update'); 
-    Route::get('destroy/{person}', 'PersonController@destroy')->name('people.destroy');
+    Route::delete('destroy/{person}', 'PersonController@destroy')->name('people.destroy');
 
 });

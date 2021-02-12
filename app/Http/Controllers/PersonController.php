@@ -47,8 +47,22 @@ class PersonController extends Controller
 
     public function destroy($person) {
         $person = Person::find($person);
-        $person->delete();
+        if(isset($person)) {
+            $isDeleted = $person->delete();
+            if($isDeleted) {
+                $response['error'] = false;
+                $response['message'] = "Dados excluídos com sucesso!";
+                return json_encode($response);
+            }else{
+                $response['error'] = true;
+                $response['message'] = "Ocorreu um erro ao excluir os dados!";        
+                return json_encode($response);
+            }
 
-        return redirect()->route('people.index');
+        } 
+
+        $response['error'] = true;
+        $response['message'] = "Os dados não foram encontrados!";
+        return json_encode($response);
     }
 }
